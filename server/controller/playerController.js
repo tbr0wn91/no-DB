@@ -26,4 +26,26 @@ module.exports = {
         id++;
         res.status(200).send(PlayerData)
     },
+
+    UpdateStats: (req, res, next) => {
+        const { avg, homeruns, RBIs} = req.body;
+        const updateId = req.params.id;
+        console.log(avg, homeruns, RBIs, updateId)
+        const PlayerToUpdate = PlayerData.findIndex(player => player.id == updateId);
+        console.log(PlayerToUpdate)
+        let player = PlayerData[PlayerToUpdate];
+
+        PlayerData[PlayerToUpdate] = {
+            id: player.id,
+            number: player.number,
+            name: player.name,
+            position: player.position,
+            avg: avg,
+            homeruns: homeruns,
+            RBIs: RBIs
+        };
+        console.log(PlayerData)
+        res.status(200).send(PlayerData);
+
+    },
 }

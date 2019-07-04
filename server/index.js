@@ -13,7 +13,7 @@ app.get("/api/lineup", Players.CreateLineup);
 
 app.post("/api/new_player", Players.CreatePlayer);
 
-app.put("/api/player_stats")
+app.put("/api/player_stats/:id", Players.UpdateStats);
 
 app.put("/api/your_player")
 
