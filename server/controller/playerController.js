@@ -30,9 +30,9 @@ module.exports = {
     UpdateStats: (req, res, next) => {
         const { avg, homeruns, RBIs} = req.body;
         const updateId = req.params.id;
-        console.log(avg, homeruns, RBIs, updateId)
+        
         const PlayerToUpdate = PlayerData.findIndex(player => player.id == updateId);
-        console.log(PlayerToUpdate)
+        
         let player = PlayerData[PlayerToUpdate];
 
         PlayerData[PlayerToUpdate] = {
@@ -44,8 +44,31 @@ module.exports = {
             homeruns: homeruns,
             RBIs: RBIs
         };
-        console.log(PlayerData)
+        
         res.status(200).send(PlayerData);
 
     },
+
+    AddPlayer: (req, res, next) => {
+        const PlayerAddId = req.params.id;
+        
+        const PlayerAdded = PlayerData.findIndex(player => player.id == PlayerAddId)
+ 
+        let YourPlayer = PlayerData[PlayerAdded]
+        PlayerData[PlayerAdded] = {
+            id: YourPlayer.id,
+            number: YourPlayer.number,
+            name: YourPlayer.name,
+            position: YourPlayer.position,
+            avg: YourPlayer.avg,
+            homeruns: YourPlayer.homeruns,
+            RBIs: YourPlayer.RBIs
+        },
+        lineup.push(YourPlayer);
+        res.status(200).send(lineup);
+    },
+    
+    DeletePlayer: (req, res, next) => {
+        
+    }
 }
