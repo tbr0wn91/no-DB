@@ -44,7 +44,9 @@ checklist:
 
 ###routes
 -get("/api/players")
+-get("/api/lineup")
 -post("/api/players")
+-put("/api/players/:id")
 -put("/api/players/:id")
 -delete("/api/players/:id")
 
