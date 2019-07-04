@@ -1,0 +1,244 @@
+const players = [{
+    "id": 1,
+    "number": 26,
+    "name": "Matt Chapman",
+    "position": "3rd baseman",
+    "avg": 266,
+    "homeruns": 21,
+    "RBIs": 52
+},
+{
+    "id": 2,
+    "number": 28,
+    "name": "Nolan Arenado",
+    "position": "3rd baseman",
+    "avg": 321,
+    "homeruns": 20,
+    "RBIs": 67
+},
+{
+    "id": 3,
+    "number": 22,
+    "name": "Mike Trout",
+    "position": "center fielder",
+    "avg": 296,
+    "homeruns": 24,
+    "RBIs": 61
+},
+{
+    "id": 4,
+    "name": "Christian Yelich",
+    "position": "right fielder",
+    "avg": 328,
+    "homeruns": 31,
+    "RBIs": 67
+},
+{
+    "id": 5,
+    "number": 99,
+    "name": "Aaron Judge",
+    "position": "right fielder",
+    "avg": 286,
+    "homeruns": 7,
+    "RBIs": 18
+},
+{
+    "id": 6,
+    "number": 50,
+    "name": "Mookie Betts",
+    "position": "right fielder",
+    "avg": 265,
+    "homeruns": 13,
+    "RBIs": 37
+}
+{
+    "id": 7,
+    "number": 2,
+    "name": "Alex Bregman",
+    "position": "3rd base man",
+    "avg": 267,
+    "homeruns": 23,
+    "RBIs": 55
+}
+{
+    "id": 8,
+    "number": 35,
+    "name": "Cody Bellinger",
+    "position": "center fielder",
+    "avg": 344,
+    "homeruns": 27,
+    "RBIs": 68
+}
+{
+    "id": 9,
+    "number": 4,
+    "name": "George Springer",
+    "position": "center fielder",
+    "avg": 307,
+    "homeruns": 18,
+    "RBIs": 45
+}
+{
+    "id": 10,
+    "number": 28,
+    "name": "J.D. Martinez",
+    "position": "left fielder",
+    "avg": 296,
+    "homeruns": 18,
+    "RBIs": 47
+}
+{
+    "id": 11,
+    "number": 30,
+    "name": "Michael Conforto",
+    "position": "left fielder",
+    "avg": 247,
+    "homeruns": 16,
+    "RBIs": 43
+}
+{
+    "id": 12,
+    "number": 23,
+    "name": "Marcell Ozuna",
+    "position": "left fielder",
+    "avg": 259,
+    "homeruns": 20,
+    "RBIs": 60
+}
+{
+    "id": 13,
+    "number": 46,
+    "name": "Paul Goldschmidt",
+    "position": "1st baseman",
+    "avg": 247,
+    "homeruns": 13,
+    "RBIs": 31
+}
+{
+    "id": 14,
+    "number": 5,
+    "name": "Freddie Freeman",
+    "position": "1st baseman",
+    "avg": 308,
+    "homeruns": 22,
+    "RBIs": 65
+}
+{
+    "id": 15,
+    "number": 17,
+    "name": "Rhys Hoskins",
+    "position": "1st baseman",
+    "avg": 262,
+    "homeruns": 19,
+    "RBIs": 55
+}
+{
+    "id": 16,
+    "number": 27,
+    "name": "Jose Altuve",
+    "position": "2nd baseman",
+    "avg": 264,
+    "homeruns": 10,
+    "RBIs": 25
+}
+{
+    "id": 17,
+    "number": 26,
+    "name": "DJ LeMahieu",
+    "position": "2nd baseman",
+    "avg": 342,
+    "homeruns": 12,
+    "RBIs": 61
+}
+{
+    "id": 18,
+    "number": 15,
+    "name": "Whit Merrifield",
+    "position": "2nd baseman",
+    "avg": 310,
+    "homeruns": 11,
+    "RBIs": 43
+}
+{
+    "id": 19,
+    "number": 4,
+    "name": "Ketel Marte",
+    "position": "short stop",
+    "avg": 308,
+    "homeruns": 20,
+    "RBIs": 52
+}
+{
+    "id": 20,
+    "number": 9,
+    "name": "Javier Baez",
+    "position": "short stop",
+    "avg": 289,
+    "homeruns": 22,
+    "RBIs": 58
+}
+{
+    "id": 21,
+    "number": 27,
+    "name": "Trevor Story",
+    "position": "short stop",
+    "avg": 293,
+    "homeruns": 17,
+    "RBIs": 48
+}
+{
+    "id": 22,
+    "number": 10,
+    "name": "J.T. Realmuto",
+    "position": "catcher",
+    "avg": 270,
+    "homeruns": 10,
+    "RBIs": 38
+}
+{
+    "id": 23,
+    "number": 24,
+    "name": "Gary Sanchez",
+    "position": "catcher",
+    "avg": 252,
+    "homeruns": 23,
+    "RBIs": 54
+}
+{
+    "id": 24,
+    "number": 10,
+    "name": "Yasmani Grandal",
+    "position": "catcher",
+    "avg": 259,
+    "homeruns": 18,
+    "RBIs": 47
+},
+{
+    "id": 25,
+    "number": 2,
+    "name": "Khris Davis",
+    "position": "DH",
+    "avg": 245,
+    "homeruns": 16,
+    "RBIs": 43
+},
+{
+    "id": 26,
+    "number": 23,
+    "name": "Nelson Cruz",
+    "position": "DH",
+    "avg": 279,
+    "homeruns": 16,
+    "RBIs": 46
+},
+{
+    "id": 27,
+    "number": 30,
+    "name": "Edwin Encarnacion",
+    "position": "DH",
+    "avg": 226,
+    "homeruns": 24,
+    "RBIs": 55
+}
+
+]
