@@ -15,9 +15,9 @@ app.post("/api/new_player", Players.CreatePlayer);
 
 app.put("/api/player_stats/:id", Players.UpdateStats);
 
-app.put("/api/your_player/:id", Players.AddPlayer);
+app.put("/api/add_player/:id", Players.AddPlayer);
 
-app.delete("/api/player")
+app.delete("/api/remove_player/:id", Players.DeletePlayer);
 
 
 

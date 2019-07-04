@@ -69,6 +69,9 @@ module.exports = {
     },
     
     DeletePlayer: (req, res, next) => {
-        
+        const deleteId = req.params.id;
+        playerToRemove = lineup.findIndex(player => player.id == deleteId);
+        lineup.splice(playerToRemove, 1);
+        res.status(200).send(lineup);
     }
 }
