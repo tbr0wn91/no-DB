@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserInput from './UserInput';
+
 import PlayerToDisplay from "./PlayerToDisplay";
 export default class DisplayName extends Component{
     constructor(props){
