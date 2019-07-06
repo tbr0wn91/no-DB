@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./SearchPlayer.css";
+
 import "./DisplayName"
 
 export default class SearchPlayer extends Component{
@@ -27,9 +27,7 @@ export default class SearchPlayer extends Component{
         
         return(
             <div className="search">
-                <input onChange={e => this.handleChange(e.target.value)} type="text"></input>
-                {namesToFilter}
-                <button onClick={e => this}>Search</button>
+                
            </div>
     
         )

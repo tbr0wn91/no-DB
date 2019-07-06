@@ -4,7 +4,7 @@ import './App.css';
 import SearchPlayer from "./components/SearchPlayer";
 import DisplayName from './components/DisplayName';
 import UserInput from "./components/UserInput"
-
+import AddPlayer from "./components/AddPlayer"
 
 
 class App extends Component {
@@ -89,7 +89,7 @@ class App extends Component {
       <main className="content">
       <SearchPlayer PlayerData={PlayerData}/>
       <DisplayName updatePlayerStats={this.updatePlayerStats} PlayerData={PlayerData} />
-      
+      <AddPlayer createNewPlayer={this.createNewPlayer} />
       </main>
       </div>
     )
