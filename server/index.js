@@ -17,7 +17,7 @@ app.put("/api/player_stats/:id", Players.UpdateStats);
 
 app.put("/api/add_player/:id", Players.AddPlayer);
 
-app.delete("/api/remove_player/:id", Players.DeletePlayer);
+app.delete("/api/delete/:id", Players.DeletePlayer);
 
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import PlayerToDisplay from "./PlayerToDisplay";
+import DeletePlayer from "./DeletePlayer"
 export default class DisplayName extends Component{
     constructor(props){
         super(props)
@@ -30,7 +31,7 @@ export default class DisplayName extends Component{
                          <PlayerToDisplay player={player}/>
                          <input onChange={(e) => this.handleUserInput(e.target.value)} type="text"></input>
                          <button onClick={() =>this.props.updatePlayerStats(player.id, this.state.UserInput)}>Update Avg</button>
-         
+                         <DeletePlayer deletePlayer={this.props.deletePlayer} id={index}/>
                  </div>
              });
 

@@ -20,7 +20,6 @@ class App extends Component {
       this.addPlayerToLineup = this.addPlayerToLineup.bind(this);
       this.createALineup = this.createALineup.bind(this);
      
-      this.deletePlayer = this.deletePlayer.bind(this)
   }
 
   componentDidMount(){
@@ -70,10 +69,11 @@ class App extends Component {
     }).catch(err => console.log(err));
   }
   
-  deletePlayer(){
-    axios.delete("/api/remove_player/:id").then(response => {
+  deletePlayer = (id) => {
+    axios.delete(`/api/delete/${id}`).then(response => {
+      console.log("delete response:",response.data)
       this.setState({
-        lineup: response.data
+        PlayerData: response.data
       })
     })
   }
@@ -86,7 +86,7 @@ class App extends Component {
         
       <main className="content">
       <SearchPlayer PlayerData={PlayerData}/>
-      <DisplayName updatePlayerStats={this.updatePlayerStats} PlayerData={PlayerData} />
+      <DisplayName updatePlayerStats={this.updatePlayerStats} PlayerData={PlayerData} deletePlayer={this.deletePlayer} />
       <AddPlayer setPlayerData={this.setPlayerData} />
       </main>
       </div>
