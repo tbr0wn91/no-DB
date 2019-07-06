@@ -24,9 +24,9 @@ export default class DisplayName extends Component{
 
     
         render(){
-            const mappedPlayers = this.props.PlayerData.map(player => {
+            const mappedPlayers = this.props.PlayerData.map((player, index) => {
                 // console.log(player)
-                 return <div>
+                 return <div key={index}>
                          <PlayerToDisplay player={player}/>
                          <input onChange={(e) => this.handleUserInput(e.target.value)} type="text"></input>
                          <button onClick={() =>this.props.updatePlayerStats(player.id, this.state.UserInput)}>Update Avg</button>
