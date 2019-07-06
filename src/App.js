@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import SearchPlayer from "./components/SearchPlayer";
+// import SearchPlayer from "./components/SearchPlayer";
 import DisplayName from './components/DisplayName';
-import UserInput from "./components/UserInput"
+// import UserInput from "./components/UserInput"
 import AddPlayer from "./components/AddPlayer"
 import Header from "./components/header"
 
@@ -85,7 +85,7 @@ class App extends Component {
         <Header />
         
       <main className="content">
-      <SearchPlayer PlayerData={PlayerData}/>
+      {/* <SearchPlayer PlayerData={PlayerData}/> */}
       <DisplayName updatePlayerStats={this.updatePlayerStats} PlayerData={PlayerData} deletePlayer={this.deletePlayer} />
       <AddPlayer setPlayerData={this.setPlayerData} />
       </main>

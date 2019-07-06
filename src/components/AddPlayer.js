@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./AddPlayer.css";
 
 export default class AddPlayer extends Component {
     constructor(props){
@@ -43,17 +44,29 @@ export default class AddPlayer extends Component {
         const { number, name, position, avg, homeruns, RBIs} = this.state;
     
         return(
-            <div>
-                <div>
+            <form className="playerform-container">
+                <div className="player-input">
                 Number:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type='number' value={number} name="number" />
                 </div>
-                Name:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={name} name="name"></input>
-                <input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={position} name="position"></input>
-                <input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number" value={avg} name="avg"></input>
-                <input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number"value={homeruns} name="homeruns"></input>
-                <input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)}type="number" value={RBIs} name="RBIs"></input>
-                <button onClick={this.createNewPlayer}>Create Player</button>
-            </div>
+                <div className="player-input">
+                P Name:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={name} name="name"/>
+                </div>
+                <div className="player-input">
+                Position:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={position} name="position" />
+                </div>
+                <div className="player-input">
+                Average:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number" value={avg} name="avg"/>
+                </div>
+                <div className="player-input">
+                Homeruns:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number"value={homeruns} name="homeruns"/>
+                </div>
+                <div className="player-input">
+                RBIs:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)}type="number" value={RBIs} name="RBIs"/>
+                </div>
+                <div>
+                <button className="player-button" onClick={this.createNewPlayer}>Create Player</button>
+                </div>
+            </form>
          
         )
     }
