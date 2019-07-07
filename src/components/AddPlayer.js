@@ -50,16 +50,16 @@ export default class AddPlayer extends Component {
                 Number:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type='number' value={number} name="number" />
                 </div>
                 <div className="player-input">
-                P Name:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={name} name="name"/>
+                P Name:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={name} name="name" placeholder="player name"/>
                 </div>
                 <div className="player-input">
-                Position:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={position} name="position" />
+                Position:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="text" value={position} name="position" placeholder="enter position"/>
                 </div>
                 <div className="player-input">
                 Average:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number" value={avg} name="avg"/>
                 </div>
                 <div className="player-input">
-                Homeruns:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number"value={homeruns} name="homeruns"/>
+                Homeruns:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type="number"value={homeruns} name="homeruns" />
                 </div>
                 <div className="player-input">
                 RBIs:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)}type="number" value={RBIs} name="RBIs"/>
