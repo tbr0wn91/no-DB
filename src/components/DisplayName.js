@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./DisplayName.css"
 import PlayerToDisplay from "./PlayerToDisplay";
 import DeletePlayer from "./DeletePlayer"
 export default class DisplayName extends Component{
@@ -27,7 +27,7 @@ export default class DisplayName extends Component{
         render(){
             const mappedPlayers = this.props.PlayerData.map((player, index) => {
                 // console.log(player)
-                 return <div key={index}>
+                 return <div key={index} className="player-list">
                          <PlayerToDisplay player={player}/>
                          <input onChange={(e) => this.handleUserInput(e.target.value)} type="text"></input>
                          <button onClick={() =>this.props.updatePlayerStats(player.id, this.state.UserInput)}>Update Avg</button>
