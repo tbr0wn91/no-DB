@@ -44,6 +44,7 @@ export default class AddPlayer extends Component {
         const { number, name, position, avg, homeruns, RBIs} = this.state;
     
         return(
+        <div className="formbox">
             <form className="playerform-container">
                 <div className="player-input">
                 Number:<input onChange={(e) => this.universalChangeHandler(e.target.name, e.target.value)} type='number' value={number} name="number" />
@@ -67,7 +68,7 @@ export default class AddPlayer extends Component {
                 <button className="player-button" onClick={this.createNewPlayer}>Create Player</button>
                 </div>
             </form>
-         
+         </div>
         )
     }
 }
