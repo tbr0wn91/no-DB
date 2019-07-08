@@ -1,4 +1,13 @@
 .player-list {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    margin: 5px
+}
+
+.display-box {
+    background-color: gray;
+    width: 30vw;
+    border: 3px red solid;
+    font-size: 18px;
+    color: white;
 }
