@@ -18,11 +18,12 @@ class App extends Component {
       
       
   }
-
+  // makes sure the data is created and inserted into DOM 
   componentDidMount(){
     this.GetAllPlayerData();
   }
 
+  // my axios call gets my data.json file from the backend
   GetAllPlayerData(){
     axios.get("/api/players").then(response => {
       this.setState({

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./DisplayName.css"
 import PlayerToDisplay from "./PlayerToDisplay";
 import DeletePlayer from "./DeletePlayer"
+
 export default class DisplayName extends Component{
     constructor(props){
         super(props)
