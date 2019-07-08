@@ -31,7 +31,7 @@ export default class DisplayName extends Component{
                          <PlayerToDisplay player={player}/>
                          <input onChange={(e) => this.handleUserInput(e.target.value)} type="text"></input>
                          <button onClick={() =>this.props.updatePlayerStats(player.id, this.state.UserInput)}>Update Avg</button>
-                         <DeletePlayer deletePlayer={this.props.deletePlayer} id={index}/>
+                         <DeletePlayer deletePlayer={this.props.deletePlayer} id={index} />
                        </div>
                  </div>
              });

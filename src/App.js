@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-// import SearchPlayer from "./components/SearchPlayer";
 import DisplayName from './components/DisplayName';
-// import UserInput from "./components/UserInput"
 import AddPlayer from "./components/AddPlayer"
 import Header from "./components/header"
 
@@ -17,9 +15,8 @@ class App extends Component {
     }
       this.GetAllPlayerData = this.GetAllPlayerData.bind(this);
       this.updatePlayerStats = this.updatePlayerStats.bind(this);
-      this.addPlayerToLineup = this.addPlayerToLineup.bind(this);
-      this.createALineup = this.createALineup.bind(this);
-     
+      
+      
   }
 
   componentDidMount(){
@@ -41,15 +38,6 @@ class App extends Component {
     })
   }
 
-  createALineup(){
-    axios.get("/api/lineup").then(response => {
-      this.setState({
-        lineup: response.data
-      })
-    }).catch(err => console.log(err));
-  }
-
- 
 
   updatePlayerStats(id, value){
     console.log(id)
@@ -61,15 +49,10 @@ class App extends Component {
     }).catch(err => console.log(err));
   }
 
-  addPlayerToLineup(){
-    axios.put("/api/add_player/:id").then(response => {
-      this.setState({
-        lineup: response.data
-      })
-    }).catch(err => console.log(err));
-  }
+ 
   
   deletePlayer = (id) => {
+    console.log("this is the id", id)
     axios.delete(`/api/delete/${id}`).then(response => {
       console.log("delete response:",response.data)
       this.setState({
@@ -85,7 +68,6 @@ class App extends Component {
         <Header />
         
       <main className="content">
-      {/* <SearchPlayer PlayerData={PlayerData}/> */}
       <DisplayName updatePlayerStats={this.updatePlayerStats} PlayerData={PlayerData} deletePlayer={this.deletePlayer} />
       <AddPlayer setPlayerData={this.setPlayerData} />
       </main>
