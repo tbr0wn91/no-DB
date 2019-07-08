@@ -1,15 +1,16 @@
 const PlayerData = require("../.././data.json")
 
-// let lineup = [];
+
 
 let id = 27;
 module.exports = {
+    // this is the function handler that gets all my data
     AllPlayers: (req, res, next) => {
         res.status(200).send(PlayerData);
     },
 
    
-
+    // handler for my post call that creates a new object
     CreatePlayer: (req, res, next) => {
         const { number, name, position, avg, homeruns, RBIs} = req.body;
         PlayerData.push({
@@ -25,6 +26,8 @@ module.exports = {
         res.status(200).send(PlayerData)
     },
 
+
+    // handler that allows my put request to upddate the players batting avg
     UpdateStats: (req, res, next) => {
         
         
@@ -45,7 +48,7 @@ module.exports = {
     },
 
    
-    
+    // handler that allows a user to delete a player at that players id
     DeletePlayer: (req, res, next) => {
         
         const deleteId = req.params.id;

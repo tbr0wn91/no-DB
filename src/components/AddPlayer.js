@@ -5,7 +5,7 @@ import "./AddPlayer.css";
 export default class AddPlayer extends Component {
     constructor(props){
         super(props)
-
+        // keeps track of the updated property values when creating a new player object
         this.state = {
             number: 0,
             name: "",

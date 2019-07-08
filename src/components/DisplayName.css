@@ -1,7 +1,8 @@
 .player-list {
     display: flex;
     flex-direction: column;
-    margin: 5px
+    margin: 5px;
+    
 }
 
 .display-box {
@@ -10,4 +11,21 @@
     border: 3px red solid;
     font-size: 18px;
     color: white;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+input {
+    background-color: rgb(233, 205, 205);
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+    margin: 4px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin: 4px;
 }

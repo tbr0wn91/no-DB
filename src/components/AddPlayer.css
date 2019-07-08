@@ -4,7 +4,6 @@
     align-items: center;
     flex-wrap: nowrap;
     
-   
 }
 
 .formbox{
@@ -13,8 +12,7 @@
     width: 20vw;
     height: 22vw;
     margin-right: 10px;
-    
-    
+ 
 }
 
 
@@ -27,5 +25,6 @@
 
 .player-input{
     margin: 5px;
-    width: 50%
+    width: 50%;
 }
+
