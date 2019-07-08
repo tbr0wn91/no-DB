@@ -13,13 +13,12 @@ export default class DisplayName extends Component{
     }
   
 
-    handleUserInput(UserInput, id, avg){
+    handleUserInput(UserInput,){
         console.log("this is the user input", UserInput)
         this.setState({
 
             UserInput: UserInput,
-            id: this.id,
-            avg: this.avg
+            
         })
     }
 
